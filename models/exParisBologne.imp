@@ -1,0 +1,23 @@
+(* Comment se rendre de Paris au LSV *)
+
+(*********************************)
+ structure
+(*********************************)
+state Paris:
+	TGV [Cost1]
+		-> (4/5) Milano;
+		-> (1/5) Paris;
+	Corail [Cost2]
+		-> (1) absorbing;
+
+state Milano:
+	Train [Cost3]
+		-> (1) absorbing;
+
+(*********************************)
+ costs
+(*********************************)
+
+& Cost1  = 7
+& Cost2 = 11
+& Cost3  = 1

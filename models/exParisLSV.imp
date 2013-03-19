@@ -1,0 +1,23 @@
+(* Comment se rendre de Paris au LSV *)
+
+(*********************************)
+ structure
+(*********************************)
+state Paris:
+	RER [RER1]
+		-> (0.6) absorbing;
+		-> (0.4) Gentilly;
+	Velo [Velo]
+		-> (1) absorbing;
+
+state Gentilly:
+	RER [RER2]
+		-> (1) absorbing;
+
+(*********************************)
+ costs
+(*********************************)
+
+& RER1 = 40
+& RER2 = 40
+& Velo = 50

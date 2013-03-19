@@ -1,0 +1,38 @@
+(* Petit schéma de mon cahier avec 2 couts  *)
+
+(*********************************)
+structure
+(*********************************)
+
+state q0:
+	a1 [Cout1Fort][Cout2Faible]
+		-> (1) q1;
+	a2 [Cout1Intermediaire][Cout2Intermediaire]
+		-> (1) q2;
+	a3 [Cout1Faible][Cout2Fort]
+		-> (1) q3;
+
+state q1:
+	c [0][0]
+		-> (1) absorbing;
+
+state q2:
+	c [0][0]
+		-> (1) absorbing;
+
+state q3:
+	c [0][0]
+		-> (1) absorbing;
+
+
+(*********************************)
+costs
+(*********************************)
+
+& Cout1Fort   = 10
+& Cout1Intermediaire = 1
+& Cout1Faible = 0
+
+& Cout2Fort   = 10
+& Cout2Intermediaire = 5
+& Cout2Faible = 0

@@ -1,0 +1,39 @@
+(* Exemple du livre "Initiation à l'algorithmique" p.551 *)
+
+(*********************************)
+structure
+(*********************************)
+
+state rennes:
+	ter [TER1] -> (1) lemans;
+	tgv1 [TGV1] -> (1) paris;
+	tgv2 [TGV2] -> (1) massy;
+
+state lemans:
+	ter2 [TER2] -> (1) paris;
+	tgv3 [TGV3] -> (1) massy;
+
+state massy:
+	rer1 [RER1] -> (1) bagneux;
+
+state paris:
+	rer2 [RER2] -> (1) bagneux;
+	taxi [Taxi] -> (1) absorbing;
+
+state bagneux:
+	walk [Walk] -> (1) absorbing;
+
+
+(*********************************)
+costs
+(*********************************)
+
+& TER1 = 80
+& TER2 = 180
+& TGV1 = 125
+& TGV2 = 130
+& TGV3 = 55
+& RER1 = 25
+& RER2 = 30
+& Taxi = 45
+& Walk = 10
