@@ -1,7 +1,7 @@
 # ImpRator
 
 **ImpRator** (*Inverse Method for Policy with Reward AbstracT behaviOR*) is a prototype implementation to compute parameter valuations in parametric Markov decision processes such that optimal policies remain optimal.
-In other words, given a Markov Decision Process with parametric weights and a valuation of the parameters leading to an optimal policy, synthesize valuations for the parametric weights such that, for any valuation of the parameters, the optimal policy remain optimal.
+In other words, given a Markov Decision Process with parametric weights and a valuation of the parameters leading to an optimal policy, synthesize valuations for the parametric weights such that, for any valuation of the parameters, the optimal policy remains optimal.
 
 
 ## Inputs and outputs
